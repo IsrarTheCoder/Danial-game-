@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    text-align: center;
+    background: #0a0a0a; /* dark desert night */
+    font-family: monospace;
+    color: #fff;
+}
+
+canvas {
+    display: block;
+    margin: 24px auto;
+    background: linear-gradient(#2c2c2c, #1a1a1a 70%, #3b2d16); /* spooky night sky + sand */
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0, 255, 0, 0.3); /* eerie green glow */
+}
+h1 {
+    font-size: 2.5em;
+    margin-top: 16px;
+    color: #39ff14; /* neon green */
+    text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14; /* glowing effect */
+}
+#musicBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff9800, #f44336);
+  color: white;
+  font-size: 16px;
+  font-family: monospace;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background 0.3s;
+}
+
+#musicBtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff5722, #d32f2f);
+}
