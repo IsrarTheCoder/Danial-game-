@@ -693,7 +693,33 @@ gameLoop();
 // // 🔊 Thunder sound load
 // const thunderSound = new Audio("music.mp3");
 // thunderSound.volume = 0.6; // halka kam rakha
+let paused = false;
+
+// 📱 Jump button → Space ke jaisa
+document.getElementById("jumpBtn").addEventListener("click", () => {
+    if (gameOver) {
+        resetGame();
+    } else {
+        velocity = jumpStrength;
+    }
+});
+
+// 📱 Pause button
+document.getElementById("pauseBtn").addEventListener("click", () => {
+    paused = !paused;
+    document.getElementById("pauseBtn").innerText = paused ? "▶️ Resume" : "⏸ Pause";
+});
+
+// 🕹 Game loop me pause check add karo
+function gameLoop() {
+    if (!paused) {
+        update();
+        draw();
+    }
+    requestAnimationFrame(gameLoop);
+}
 
 // // Start game
 // resetGame();
 // gameLoop();
+
