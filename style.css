@@ -40,3 +40,29 @@ h1 {
   transform: scale(1.05);
   background: linear-gradient(135deg, #ff5722, #d32f2f);
 }
+#controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
+
+#controls button {
+  padding: 16px 24px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff9800, #f44336);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+#controls button:active {
+  transform: scale(0.9);
+}
+
